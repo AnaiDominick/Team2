@@ -42,6 +42,7 @@ body {
     background-repeat: no-repeat;
     background-position: bottom bottom;
     background-size: cover;
+    
   }
 
   #slide2 {
@@ -49,6 +50,7 @@ body {
     background-repeat: no-repeat;
     background-position: bottom bottom;
     background-size: cover;
+    color: black;
   }
 
   #slide3 {
