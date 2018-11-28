@@ -13,7 +13,7 @@
      map = new Microsoft.Maps.Map(document.getElementById("myMap"),
         {
       credentials: "AvfsA6uEIfvX5BcL6PMNPQPwVziBK9_w9n9HCLXs9Ic1Kby82FlFCSHa-n_ovjpW",
-      center: new Microsoft.Maps.Location(25.6495227,-100.4442138), // Kordinat bener meriah
+      center: new Microsoft.Maps.Location(25.6495227,-100.4442138), // monterrey
       mapTypeId: Microsoft.Maps.MapTypeId.aerial,
       zoom: 8
      });
@@ -33,19 +33,20 @@
     var pin1 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(25.6494546,-100.4528467));
        //Store metadata on pushpin
     pin1.metadata = {
-      title: 'Keterangan',
-      description: 'Ibukota Abdya'
+      title: 'Huasteca',
+      description: 'Parque Ecologico'
     };
      // Add handling event click on pushpin
     Microsoft.Maps.Events.addHandler(pin1, 'click', pushpinClicked);
    //Set entity pushpin on map
+  
     map.entities.push(pin1);
        
       // for Calang city
        var pin2 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(25.6086297,-100.3807202),{color: 'red'});
        pin2.metadata = {
-      title: 'Keterangan',
-      description: 'Ibukota Kab.Aceh Jaya'
+      title: 'Chipinque',
+      description: 'Parque Ecologico'
      };
        Microsoft.Maps.Events.addHandler(pin2, 'click', pushpinClicked);
     map.entities.push(pin2);
@@ -53,8 +54,8 @@
     //For Sabang city
     var pin3 = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(25.6787085,-100.2864951),{color: 'yellow'});
        pin3.metadata = {
-      title: 'Keterangan',
-      description: 'Ibukota Kotamadya Sabang'
+      title: 'Fundidora',
+      description: 'Parque Ecologico'
      };
        Microsoft.Maps.Events.addHandler(pin3, 'click', pushpinClicked);
     map.entities.push(pin3);
@@ -69,19 +70,36 @@
     map.entities.push(pin4);
    }
    
-    function pushpinClicked(e) {
+    function pushpinClicked(e) {       
             //To ensure whether infobox have metadata to be displayed
-           if (e.target.metadata) {
+           if (e.target.metadata) {              
               //Add metadata pushpin on option infobox
-               infobox.setOptions({
+               infobox.setOptions({                  
                    location: e.target.getLocation(),
                    title: e.target.metadata.title,
                    description: e.target.metadata.description,
-                   visible: true
+                   visible: true,
+                   actions: [{
+                     label: 'link',
+                     eventHandler: function () {
+                        if (e.target.metadata.title == "Huasteca"){
+                           document.location.href = "huasteca.html";
+                        }
+                        if (e.target.metadata.title == "Chipinque"){
+                           document.location.href = "chipinque.html";
+                        }
+                        if (e.target.metadata.title == "Fundidora"){
+                           document.location.href = "fundidora.html";
+                        }
+                         
+                     }}]
                });
-           }
-       }
+            
+              
+            }
+   }
 
+      
 
 
 
