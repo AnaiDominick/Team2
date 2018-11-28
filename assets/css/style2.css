@@ -1,0 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+
+.jumbotron {
+    background-image: url("../images/huasteca.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+}
