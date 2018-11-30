@@ -13,11 +13,11 @@ $.ajax({
     .then(function (response) {
         console.log(queryURL);
         console.log(response);
-debugger;
+
         $("#city").html("<h5>" + response.name + " Weather:</h5>");
         $("#wind").text("Wind Speed: " + response.wind.speed + " m/s");
         $("#humidity").text("Humidity: " + response.main.humidity + "%");
-        $("#temp").text("Temperature (F) " + response.main.temp);
+        $("#temp").text(" Temperature (C) " + Math.floor((response.main.temp - 32) * (5/9)));
         $("#coordenates").text("Coordenates " + + response.coord.lon + ", " + "lat: " + response.coord.lat);
 
         console.log("Wind Speed: " + response.wind.speed + " m/s");

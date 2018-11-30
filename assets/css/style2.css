@@ -21,9 +21,12 @@
 /* STYLE WEATHER */
 .icon-weather {
     color: white;
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
   }
   
   .ajax-weather {
     color: white;
+    margin-top: 10px;
 }
