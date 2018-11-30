@@ -37,6 +37,8 @@ body {
     height: 32rem;
   }
 
+  /* IMAGES CAROUSEL */
+
   #slide1 {
     background-image: url("../images/carousel0.jpg");
     background-repeat: no-repeat;
@@ -59,6 +61,21 @@ body {
     background-position: bottom bottom;
     background-size: cover;
   }
+
+  /* STYLE CAROUSEL */
+#img2 {
+  color: black;
+}
+
+/* STYLE WEATHER */
+.icon-weather {
+  color: white;
+  margin-left: 20px;
+}
+
+.ajax-weather {
+  color: white;
+}
   
   
   /* MARKETING CONTENT
@@ -77,6 +94,11 @@ body {
     margin-left: .75rem;
   }
   
+  /* STYLE SUSCRIBE */
+
+  #suscribe {
+    background-color: #4cb848;
+  }
   
   /* Featurettes
   ------------------------- */

@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style2.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
@@ -46,10 +47,34 @@
                     <a class="nav-link" href="chipinque.html">Chipinque</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            <ul class="navbar-nav mt-2 mt-md-0">
+                    <li class="nav-item">
+                        <div class="icon-weather" id="city">El clima en Monterrey: </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <div class="icon-weather"><i class="fas fa-thermometer-half"></i></div>
+                    </li>
+                    <li>
+                        <div id="temp" class="ajax-weather">temp</div>
+                    </li>
+
+                    <li class="nav-item">
+                        <div class="icon-weather"><i class="fas fa-wind"></i></div>
+                    </li>
+                    <li>
+                        <div id="wind" class="ajax-weather"> wind</div>
+                    </li>
+
+                    <li class="nav-item">
+                        <div class="icon-weather"><i class="fas fa-tint"></i></div>
+                    </li>
+                    <li>
+                        <div id="humidity" class="ajax-weather">humid</div>
+                    </li>
+
+            </ul>
+            
         </div>
     </nav>
 
@@ -57,8 +82,8 @@
 
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="jumbotron">
-            <div class="container" style="height: 300px;">
-                <h1 class="display-3">Hello, world!</h1>
+            <div class="container" style="height: 200px">
+                <h1 class="display-3">Parque la Huasteca</h1>
                 <p>This is a template for a simple marketing or informational website. It includes a large callout
                     called a jumbotron and three supporting pieces of content. Use it as a starting point to create
                     something more unique.</p>
@@ -69,11 +94,11 @@
         <div class="container">
             <!-- Example row of columns -->
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12" id="title-huatesca">
                     <h2>La Huasteca</h2>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
-                        tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem
-                        malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <p>Es un parque ecológico ubicado en el municipio de Santa Catarina en el estado de Nuevo León, 
+                        dentro del área metropolitana de la ciudad de Monterrey. Se encuentra entre la Sierra Madre Oriental, 
+                        con grandes formaciones montañosas y rocosas, y forma parte del Parque Nacional Cumbres de Monterrey.  </p>
                     <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
                 </div>
                
@@ -83,7 +108,7 @@
             <!-- Example row of columns -->
             <div class="row">
                 <div class="col-md-6">
-                    <h2>Actividades</h2>
+                    <h2>Rutas Sugeridas</h2>
                     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
                         tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem
                         malesuada magna mollis euismod. Donec sed odio dui. </p>
@@ -91,7 +116,7 @@
                 </div>
 
                 <div class="col-md-6">
-                    <h2>Noticias</h2>
+                    <h2>Actividades</h2>
                     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo,
                         tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem
                         malesuada magna mollis euismod. Donec sed odio dui. </p>
@@ -107,7 +132,7 @@
     </main>
 
     <footer class="container">
-        <p>&copy; Company 2017-2018</p>
+        <p>&copy; 2018 Outdoors del Norte, SAPI de CV</p>
     </footer>
 </body>
 

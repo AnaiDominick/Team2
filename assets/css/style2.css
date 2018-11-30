@@ -5,6 +5,25 @@
 .jumbotron {
     background-image: url("../images/huasteca.jpg");
     background-repeat: no-repeat;
-    background-position: bottom center;
+    background-position: center center;
     background-size: cover;
+    color: white;
+}
+
+#title-huatesca {
+    text-align: center;
+}
+
+.display-3 {
+    margin-top: 200px;
+}
+
+/* STYLE WEATHER */
+.icon-weather {
+    color: white;
+    margin-left: 20px;
+  }
+  
+  .ajax-weather {
+    color: white;
 }
