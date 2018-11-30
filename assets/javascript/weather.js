@@ -13,8 +13,8 @@ $.ajax({
     .then(function (response) {
         console.log(queryURL);
         console.log(response);
-
-        $("#city").html("<h1>" + response.name + " Weather Details</h1>");
+debugger;
+        $("#city").html("<h5>" + response.name + " Weather:</h5>");
         $("#wind").text("Wind Speed: " + response.wind.speed + " m/s");
         $("#humidity").text("Humidity: " + response.main.humidity + "%");
         $("#temp").text("Temperature (F) " + response.main.temp);

@@ -15,7 +15,7 @@
       credentials: "AvfsA6uEIfvX5BcL6PMNPQPwVziBK9_w9n9HCLXs9Ic1Kby82FlFCSHa-n_ovjpW",
       center: new Microsoft.Maps.Location(25.6495227,-100.4442138), // monterrey
       mapTypeId: Microsoft.Maps.MapTypeId.aerial,
-      zoom: 8
+      zoom: 11
      });
     
      //Create window infobox in the middle of pin (not displayed)
