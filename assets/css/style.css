@@ -102,6 +102,10 @@ body {
   #suscribe {
     background-color: #4cb848;
   }
+
+  #newsletter {
+    margin-left: 25%;
+  }
   
   /* Featurettes
   ------------------------- */
