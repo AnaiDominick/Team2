@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+
+.jumbotron {
+    background-image: url("../images/fundidora.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    color: black;
+}
+
+.jumbotron .container {
+    max-width: 72rem;
+    background: rgba(255,255,255,0.4);
+    color:black;
+    margin-top: 30px;
+}
+
+.jumbotron p {
+    text-shadow: 0 0 10px rgba(0,0,0.,0.5);
+    font-weight: 400;
+}
+
+#title-huatesca {
+    text-align: center;
+}
+
+.display-3 {
+    margin-top: 200px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+/* STYLE WEATHER */
+.icon-weather {
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+  
+  .ajax-weather {
+    color: white;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 375px) {
+    body {
+      width: 370px;
+    } 
+    
+    nav {
+      width: 375px;
+    }
+  }

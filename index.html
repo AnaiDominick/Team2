@@ -8,17 +8,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
     <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap' async defer></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
     <script src="assets/javascript/app.js"></script>
+    <script src="assets/javascript/weather.js"></script>
+    <script src="assets/javascript/newsletter.js"></script>
 
 
 </head>
@@ -26,7 +31,9 @@
 <body onload="GetMap();">
 
     <header>
+
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+
             <a class="navbar-brand" href="#">Bike My Ride</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,21 +42,49 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="huasteca.html">La Huasteca</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
+                        <a class="nav-link" href="fundidora.html">Fundidora</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="chipinque.html">Chipinque</a>
                     </li>
                 </ul>
-                <form class="form-inline mt-2 mt-md-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
+                <ul class="navbar-nav mt-2 mt-md-0">
+                    <li class="nav-item">
+                        <div class="icon-weather" id="city">El clima en Monterrey: </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <div class="icon-weather"><i class="fas fa-thermometer-half"></i></div>
+                    </li>
+                    <li>
+                        <div id="temp" class="ajax-weather">temp</div>
+                    </li>
+
+                    <li class="nav-item">
+                        <div class="icon-weather"><i class="fas fa-wind"></i></div>
+                    </li>
+                    <li>
+                        <div id="wind" class="ajax-weather"> wind</div>
+                    </li>
+
+                    <li class="nav-item">
+                        <div class="icon-weather"><i class="fas fa-tint"></i></div>
+                    </li>
+                    <li>
+                        <div id="humidity" class="ajax-weather">humid</div>
+                    </li>
+                </ul>
+
             </div>
+
         </nav>
+
     </header>
 
     <main role="main">
@@ -65,32 +100,32 @@
                     <!-- <img class="first-slide" src="assets/images/carousel0.jpg" alt="First slide"> -->
                     <div class="container">
                         <div class="carousel-caption text-left">
-                            <h1>La Huasteca</h1>
-                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
-                                gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                            <h1>¡Bienvenido!</h1>
+                            <p>Este es un espacio donde puedes encontrar toda la informacion referente a los
+                                principales lugares de la región
+                                para hacer actividades al aire libre. Te invitamos a suscribirte a nuestro boletín para
+                                recibir todas las noticias. </p>
+                            <p><a class="btn btn-lg btn-primary" href="#footer" role="button">Suscríbete</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item" id="slide2">
                     <!-- <img class="second-slide" src="assets/images/carousel1.jpg" alt="Second slide"> -->
                     <div class="container">
-                        <div class="carousel-caption">
-                            <h1>Another example headline.</h1>
-                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
-                                gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                        <div class="carousel-caption text-left" id="img2">
+                            <h1>Conquista la cima.</h1>
+                            <p>Por muy alta que sea la montaña, siempre hay un camino hacia la cima.</p>
+                            
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item" id="slide3">
                     <!-- <img class="third-slide" src="assets/images/carousel2.jpg" alt="Third slide"> -->
                     <div class="container">
-                        <div class="carousel-caption text-right">
-                            <h1>One more for good measure.</h1>
-                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta
-                                gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                        <div class="carousel-caption text-right" id="img3">
+                            <h1>Vive la aventura.</h1>
+                            <p>La más larga caminata siempre comienza con un paso.</p>
+                           
                         </div>
                     </div>
                 </div>
@@ -118,28 +153,33 @@
                     <img class="rounded-circle" src="assets/images/biking.png" alt="Generic placeholder image" width="140"
                         height="140">
                     <h2>Ciclismo</h2>
-                    <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh
-                        ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-                        Praesent commodo cursus magna.</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                    <p>El ciclismo es un deporte cuyos beneficios se podrán observar con el paso del tiempo, cuando nos
+                        habituemos a
+                        circular con la bicileta. El ciclismo es un buen ejercicio que maximiza tu habilidad para la
+                        práctica deportiva y
+                        ayuda a disminuir el estrés del cuerpo y de la mente.</p>
+                   
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4">
                     <img class="rounded-circle" src="assets/images/hiking.png" alt="Generic placeholder image" width="140"
                         height="140">
                     <h2>Senderismo</h2>
-                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-                        Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo,
-                        tortor mauris condimentum nibh.</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                    <p>El senderismo es una actividad que se realiza por senderos y caminos existentes en ambientes
+                        naturales.
+                        Es un deporte que se ejecuta siempre en espacios abiertos y naturales y uno de sus rasgos más
+                        importantes es que permite hacer ejercicio al mismo tiempo que disfrutar la vista y conocer
+                        diferentes tipos
+                        de paisajes.</p>
+                 
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4">
                     <img class="rounded-circle" src="assets/images/camping.png" alt="Generic placeholder image" width="140"
                         height="140">
                     <h2>Camping</h2>
-                    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id
-                        ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                        condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                    <p>Acampada, campamento o camping​ es la actividad humana que consiste en colocar una vivienda
+                        temporal, ya sea portátil o improvisada, en un lugar con el fin de habitarla. También se denomina así al
+                        lugar físico donde se realiza esta actividad.</p>
+                    
                 </div><!-- /.col-lg-4 -->
             </div><!-- /.row -->
 
@@ -149,11 +189,13 @@
 
             <div class="row featurette">
                 <div class="col-md-4">
-                    <h2 class="featurette-heading">Ciclismo. <span class="text-muted">It'll blow your
-                            mind.</span></h2>
-                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta
-                        felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce
-                        dapibus, tellus ac cursus commodo.</p>
+                    <h2 class="featurette-heading">Ciclismo. <span class="text-muted">Disfruta la belleza de la Sierra
+                            Madre Oriental.</span></h2>
+                    <p class="lead">Dentro de esta actividad existen diversas modalidades, la primera de ellas es el
+                        ciclismo de ruta,
+                        que es una forma de competición que se puede realizar en cualquier carretera; te invitamos a
+                        visitar Parque
+                        Fundidora que cuenta con una circuito de 3.5 km de pista.</p>
                 </div>
 
                 <div class="col-md-8 order-md-1">
@@ -164,7 +206,7 @@
                         <div class="card-body">
                             <div class="panel-heading"></div>
                             <div class="panel-body">
-                                <div id="myMap" style="width:700px; height:500px"></div>
+                                <div id="myMap"></div>
                             </div>
                         </div>
                     </div>
@@ -172,52 +214,28 @@
 
             </div>
 
-
-            <hr class="featurette-divider">
-
             <div class="row featurette">
-                <div class="col-md-4 order-md-2">
-                    <h2 class="featurette-heading">Senderismo <span class="text-muted">See for yourself.</span></h2>
-                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta
-                        felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce
-                        dapibus, tellus ac cursus commodo.</p>
-                </div>
-                <div class="col-md-8 order-md-1">
-                    <div class="card">
-                            <div class="card-header">
-                                Pin Bing Maps
-                            </div>
-                            <div class="card-body">
-                                <div class="panel-heading"></div>
-                                <div class="panel-body">
-                                    <div id="myMap" style="width:700px; height:500px"></div>
-                                </div>
-                            </div>
-                    </div>
+                <div class="col-md-12">
+                    <p class="lead">Si buscas algo más extremo, el ciclismo de montaña es para ti. Se realiza en
+                        circuitos naturales,
+                        a través de caminos en auténticos bosques, con cuestas empinadas y descensos. Los nuevoleoneses
+                        aprovechan
+                        regularmente los espacios que ofrece Chipinque y La Huasteca.</p>
                 </div>
             </div>
 
-            <hr class="featurette-divider">
-
             <div class="row featurette">
-                <div class="col-md-4">
-                    <h2 class="featurette-heading">Camping <span class="text-muted">Checkmate.</span></h2>
-                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta
-                        felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce
-                        dapibus, tellus ac cursus commodo.</p>
+                <div class="col-md-6 order-md-0">
+                    <h2 class="featurette-heading">Senderismo <span class="text-muted">It'll blow your mind.</span></h2>
+                    <p class="lead">¿Sabías que Monterrey es conocida como “La Ciudad de las Montañas”? Vivimos 
+                        realmente en medio de un paraíso infinito que está ahí para nosotros, esperando que 
+                        recorramos cada uno de sus senderos, un paraíso que nos invita a despejarnos un rato, 
+                        a disfrutar de la naturaleza, a convivir con nuestros amigos, conectarnos con nosotros mismos y vencer nuevos retos.</p>
                 </div>
-                <div class="col-md-8">
-                    <div class="card">
-                            <div class="card-header">
-                                Pin Bing Maps
-                            </div>
-                            <div class="card-body">
-                                <div class="panel-heading"></div>
-                                <div class="panel-body">
-                                    <div id="myMap" style="width:700px; height:500px"></div>
-                                </div>
-                            </div>
-                    </div>
+                <div class="col-md-6 order-md-2">
+                    <h2 class="featurette-heading">Camping <span class="text-muted">See for yourself.</span></h2>
+                    <p class="lead">Seguro muchas veces has querido ir a acampar un fin de semana, pero no sabes a 
+                        donde ir, te entendemos perfecto, ya que nosotros pasamos por eso una infinidad de veces. La verdad es que Monterrey es un paraíso y lo mejor de todo es que no tenemos que ir tan lejos para darnos esa escapada de fin de semana que tanto queremos, solo es cuestión de darnos el tiempo de planear la aventura y lanzarnos a ella.</p>
                 </div>
             </div>
 
@@ -225,12 +243,38 @@
 
             <!-- /END THE FEATURETTES -->
 
+
         </div><!-- /.container -->
 
+        <div class="jumbotron" id="suscribe">
+            <div class="container">
+                <div class="row featurette">
+                    <div class="col-md-6 order-md-0">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">
+                                    <h1>Suscríbete a nuestro Newsletter</h1>
+                                </label>
+                                <input type="email" class="form-control" id="email-input" placeholder="name@example.com">
+                                <br>
+                                <button type="submit" class="btn btn-primary mb-2" id="add-user">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+        
+                    <div class="col-lg-6 order-md-2">
+                        <img id="newsletter" src="assets/images/newsletter.png" alt="newsletter" width="200" height="200">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
         <!-- FOOTER -->
-        <footer class="container">
+        <footer class="container" id="footer">
             <p class="float-right"><a href="#">Back to top</a></p>
-            <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+            <p>&copy; 2018 Outdoors del Norte, SAPI de CV &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
         </footer>
 
     </main>

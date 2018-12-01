@@ -37,6 +37,8 @@ body {
     height: 32rem;
   }
 
+  /* IMAGES CAROUSEL */
+
   #slide1 {
     background-image: url("../images/carousel0.jpg");
     background-repeat: no-repeat;
@@ -59,6 +61,31 @@ body {
     background-position: bottom bottom;
     background-size: cover;
   }
+
+  /* STYLE CAROUSEL */
+#img2 {
+  color: black;
+}
+
+/* STYLE WEATHER */
+.icon-weather {
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.ajax-weather {
+  color: white;
+  margin-top: 10px;
+}
+
+/* MAP */
+
+#myMap {
+  width: 700PX;
+  height: 500px;
+}
   
   
   /* MARKETING CONTENT
@@ -77,6 +104,16 @@ body {
     margin-left: .75rem;
   }
   
+  /* STYLE SUSCRIBE */
+
+  #suscribe {
+    background-color: #4cb848;
+    height: 300px;
+  }
+
+  #newsletter {
+    margin-left: 25%;
+  }
   
   /* Featurettes
   ------------------------- */
@@ -91,10 +128,35 @@ body {
     line-height: 1;
     letter-spacing: -.05rem;
   }
+
   
-  
-  /* RESPONSIVE CSS
+     /* RESPONSIVE CSS
   -------------------------------------------------- */
+
+ 
+
+
+@media screen and (max-width: 800px) { 
+
+  #myMap {
+    width: 300px;
+    height: 300px;
+
+  }
+}
+
+/* Iphone X */
+@media screen and (max-width: 375px) {
+  body {
+    width: 370px;
+  } 
+  
+  nav {
+    width: 375px;
+  }
+}
+
+
   
   @media (min-width: 40em) {
     /* Bump up size of carousel content */
@@ -107,6 +169,7 @@ body {
     .featurette-heading {
       font-size: 50px;
     }
+
   }
   
   @media (min-width: 62em) {
@@ -114,3 +177,5 @@ body {
       margin-top: 7rem;
     }
   }
+
+  

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bike My Ride</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style4.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+    <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap' async defer></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="assets/javascript/app.js"></script>
+    <script src="assets/javascript/weather.js"></script>
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Bike My Ride</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="huasteca.html">La Huasteca</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="fundidora.html">Fundidora</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="chipinque.html">Chipinque</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mt-2 mt-md-0">
+                <li class="nav-item">
+                    <div class="icon-weather" id="city">El clima en Monterrey: </div>
+                </li>
+
+                <li class="nav-item">
+                    <div class="icon-weather"><i class="fas fa-thermometer-half"></i></div>
+                </li>
+                <li>
+                    <div id="temp" class="ajax-weather">temp</div>
+                </li>
+
+                <li class="nav-item">
+                    <div class="icon-weather"><i class="fas fa-wind"></i></div>
+                </li>
+                <li>
+                    <div id="wind" class="ajax-weather"> wind</div>
+                </li>
+
+                <li class="nav-item">
+                    <div class="icon-weather"><i class="fas fa-tint"></i></div>
+                </li>
+                <li>
+                    <div id="humidity" class="ajax-weather">humid</div>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <main role="main">
+
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div class="jumbotron" style="height: 525px">
+            <div class="container">
+                <h1 class="display-3">Parque Ecológico Chipinque</h1>
+                <p class="lead">Chipinque es un lugar ideal para los que disfrutan de las actividades al aire libre. 
+                    Cuenta con más de 60 kilómetros de veredas naturales, y para los ciclistas posee 28 kilómetros de brechas y 
+                    carreteras de distinto grado de dificultad.</p>
+                
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Example row of columns -->
+            <div class="row">
+                <div class="col-md-12" id="title-huatesca">
+                    <h2>Chipinque</h2>
+                    <p class="lead">En la Sierra Madre Oriental, dentro de los límites del Parque Nacional Cumbres de Monterrey, se
+                        encuentra esta
+                        área natural de 1,791 hectáreas abarcando altitudes de 730 hasta los 2,200 metros sobre el
+                        nivel del mar, con
+                        flora y fauna representativa desde el matorral xerófilo hasta el bosque de Pino-encino. </p>
+                 
+                </div>
+
+            </div>
+            <br>
+            <div class="container">
+                <!-- Example row of columns -->
+                <div class="row">
+                        <div class="col-md-6 order-md-0" style="text-align: justify">
+                            <h2>Ciclismo</h2>
+                            <p class="lead">Si te gusta el ciclismo de montaña o de ruta, el Parque Chipinque cuenta con más de 60 km de brechas, veredas y carretera con grados de dificultad, baja, media y alta. Como requisito se necesita portar una placa de identificación, adquiérela en la caseta de entrada.</p>
+                            <br>
+                            <h2>Senderismo</h2>
+                            <p class="lead">Se cuenta con más de 60 km de brechas y veredas naturales, para realizar recorridos de esparcimiento y relajación, así como de medio y alto impacto para deportistas.</p>
+                            
+                        </div>
+                        <div class="col-md-6 order-md-2">
+                                <h2 class="featurette-heading">¿Cómo llegar? y Horarios</h2>
+                                <p class="lead">El parque se encuentra abierto al público todo el año, incluyendo días festivos y asuetos 
+                                     6:00 am a 19:30 hrs. </p>
+                                <p class="lead">Es relativamente fácil llegar al Parque Ecológico Chipinque ya que por encontrarse a 15 
+                                    minutos del centro de la ciudad sus vías de acceso son rápidas. </p>
+                                <p class="lead">Si viene en automóvil y ubicándolo desde el punto conocido como “los Tubos”, en el cruce de las avenidas Vasconcelos y Gómez Morín, en el municipio de San Pedro, deberá conduicir sobre la avenida Gómez Morín al sur (hacia arriba) y la avenida misma lo conduce hasta el Parque, siguiendo los señalamientos de tránsito. </p>
+                                <p class="lead">Si viene en transporte urbano, puede tomar la ruta que lo ubica en el cruce de las avenidas Vasconcelos y Gómez Morín, en el municipio de San Pedro (Ruta 130) y de ahí puede tomar un taxi que lo traslade hasta el Parque. </p> 
+                        </div>
+        
+                    </div> <!-- /container -->
+
+                <hr>
+
+            </div> <!-- /container -->
+
+    </main>
+
+    <footer class="container">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2018 Outdoors del Norte, SAPI de CV</p>
+    </footer>
+</body>
+
+</html>

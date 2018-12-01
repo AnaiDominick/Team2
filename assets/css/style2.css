@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+}
+
+.jumbotron {
+    background-image: url("../images/huasteca.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: white;
+}
+
+
+#title-huatesca {
+    text-align: center;
+}
+
+.display-3 {
+    margin-top: 200px;
+}
+
+/* STYLE WEATHER */
+.icon-weather {
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+  
+  .ajax-weather {
+    color: white;
+    margin-top: 10px;
+}
+
+.responsive {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+  @media screen and (max-width: 375px) {
+    body {
+      width: 375px;
+    } 
+    
+    nav {
+      width: 375px;
+    }
+
+    .jumbotron h1 {
+        font-size: 4em;
+    }
+
+    .responsive{
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+  }
