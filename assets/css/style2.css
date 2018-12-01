@@ -10,6 +10,7 @@
     color: white;
 }
 
+
 #title-huatesca {
     text-align: center;
 }
@@ -30,3 +31,37 @@
     color: white;
     margin-top: 10px;
 }
+
+.responsive {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+  @media screen and (max-width: 375px) {
+    body {
+      width: 375px;
+    } 
+    
+    nav {
+      width: 375px;
+    }
+
+    .jumbotron h1 {
+        font-size: 4em;
+    }
+
+    .responsive{
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+  }

@@ -79,6 +79,13 @@ body {
   color: white;
   margin-top: 10px;
 }
+
+/* MAP */
+
+#myMap {
+  width: 700PX;
+  height: 500px;
+}
   
   
   /* MARKETING CONTENT
@@ -101,6 +108,7 @@ body {
 
   #suscribe {
     background-color: #4cb848;
+    height: 300px;
   }
 
   #newsletter {
@@ -120,10 +128,35 @@ body {
     line-height: 1;
     letter-spacing: -.05rem;
   }
+
   
-  
-  /* RESPONSIVE CSS
+     /* RESPONSIVE CSS
   -------------------------------------------------- */
+
+ 
+
+
+@media screen and (max-width: 800px) { 
+
+  #myMap {
+    width: 300px;
+    height: 300px;
+
+  }
+}
+
+/* Iphone X */
+@media screen and (max-width: 375px) {
+  body {
+    width: 370px;
+  } 
+  
+  nav {
+    width: 375px;
+  }
+}
+
+
   
   @media (min-width: 40em) {
     /* Bump up size of carousel content */
@@ -136,6 +169,7 @@ body {
     .featurette-heading {
       font-size: 50px;
     }
+
   }
   
   @media (min-width: 62em) {
@@ -143,3 +177,5 @@ body {
       margin-top: 7rem;
     }
   }
+
+  
